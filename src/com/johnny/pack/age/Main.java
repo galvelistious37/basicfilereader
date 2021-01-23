@@ -74,7 +74,7 @@ public class Main {
             title = data[0];
             year = Integer.parseInt(data[1]);
             price = Double.parseDouble(data[2]);
-            return new Movie(title, year, price);
+            return Movie.makeMovieObj(title, year, price);
         }
     }
 }
