@@ -21,6 +21,11 @@ public class Main {
         closeReader(in);
     }
 
+    /**
+     * Present a File Chooser GUI so the user can
+     * select a file.
+     * @return A File object
+     */
     private static File choseFile() {
         String start = Constant.START_PATH;
         JFileChooser fc = new JFileChooser(start);
@@ -32,6 +37,11 @@ public class Main {
         }
     }
 
+    /**
+     * Creates and returns a BufferedReader object.
+     * @param name - The File object passed in as a parameter
+     * @return - A BufferedReader object
+     */
     private static BufferedReader getReader(File name) {
         BufferedReader in = null;
         try{
@@ -44,6 +54,11 @@ public class Main {
         return in;
     }
 
+    /**
+     * Close a BufferedReader object.
+     * @param in - The BufferedReader object passed in
+     *           as a parameter
+     */
     private static void closeReader(BufferedReader in) {
         try{
             in.close();
@@ -54,6 +69,12 @@ public class Main {
         }
     }
 
+    /**
+     * Read the lines of a file create a movie object from the line
+     * information.
+     * @param in - BufferedReader object to read the lines of a file.
+     * @return - a Movie object created from file lines.
+     */
     private static Movie readMovie(BufferedReader in){
         String title;
         int year;
